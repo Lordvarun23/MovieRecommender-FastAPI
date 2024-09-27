@@ -10,22 +10,18 @@ import pandas as pd
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Allow CORS for frontend to access API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Can limit this to frontend URL in production
+    allow_origins=["*"],  
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Load dataset
 movies = pd.read_csv('movies.csv')
 ratings = pd.read_csv('ratings.csv')
 
-# Merge ratings and movies
 movie_ratings = pd.merge(ratings, movies, on='movieId')
 
-# Pivot the table for collaborative filtering (user-item matrix)
 user_movie_matrix = movie_ratings.pivot_table(index='userId', columns='title', values='rating')
 user_movie_matrix.fillna(0, inplace=True)
 
