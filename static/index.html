@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Movie Recommender</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="search-container">
+                <h2>Find Your Movie</h2>
+                <input type="text" id="movieInput" placeholder="Search for a movie...">
+                <button id="searchBtn" onclick="searchMovie()">Search</button>
+            </div>
+
+            <div id="searchResults" class="results"></div>
+
+            <h2>Get Recommendations</h2>
+            <input type="text" id="recommendInput" placeholder="Enter a movie for recommendations">
+            <button id="recommendBtn" onclick="getRecommendations()">Recommend</button>
+
+            <div id="recommendResults" class="results"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with Love by Movie Enthusiasts</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
