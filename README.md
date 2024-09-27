@@ -93,3 +93,9 @@ The UI is served from the FastAPI app and located in the `static/` directory. It
 │   ├── styles.css         # CSS for styling
 │   └── script.js          # JavaScript for client-side interactions
 └── README.md             # Project documentation
+```
+### Demo
+![image](https://github.com/user-attachments/assets/e61a520d-2036-4e19-9306-f99dc5833f9b)
+![image](https://github.com/user-attachments/assets/ea2efba6-c123-44ee-bf54-1bb0b29a895b)
+![image](https://github.com/user-attachments/assets/105b52da-50d2-47a8-b77a-7fbf682c8bec)
+
